@@ -1,0 +1,160 @@
+/* CSS RESET */
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-softBlue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-veryDarkBlueMain: hsl(217, 54%, 11%);
+  --clr-veryDarkBlueCard: hsl(216, 50%, 16%);
+  --clr-veryDarkBlueLine: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-base: "Outfit", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+/* General Styling */
+body {
+  min-height: 100vh;
+  background: var(--clr-veryDarkBlueMain);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-base);
+}
+
+/* NFT Article Styling */
+.nft-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--clr-veryDarkBlueCard);
+  padding: 1.25rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+}
+
+.nft-img {
+  border-radius: 0.5rem;
+}
+
+.nft-title {
+  color: var(--clr-white);
+  font-size: 22px;
+  font-weight: var(--fw-600);
+}
+
+.nft-description {
+  color: var(--clr-softBlue);
+  font-size: 16px;
+  font-weight: var(--fw-300)
+}
+
+.nft-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nft-value {
+  color: var(--clr-cyan);
+  font-weight: var(--fw-600);
+}
+
+.nft-value::before {
+  content: url('./images/icon-ethereum.svg');
+  padding: 0 5px 0 0;
+  vertical-align: -13%;
+}
+
+.nft-countdown {
+  color: var(--clr-softBlue);
+  font-weight:  var(--fw-400);
+}
+
+.nft-countdown::before {
+  content: url('./images/icon-clock.svg');
+  padding: 0 5px 0 0;
+  vertical-align: -13%;
+}
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--clr-veryDarkBlueLine);
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.avatar-img {
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 35px;
+}
+
+.avatar-creator {
+  color: var(--clr-softBlue);
+  font-weight: var(--fw-300);
+}
+
+.avatar-creator span {
+  color: var(--clr-white);
+}
