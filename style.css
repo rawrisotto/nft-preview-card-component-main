@@ -60,6 +60,7 @@ h6 {
 :root {
   --clr-softBlue: hsl(215, 51%, 70%);
   --clr-cyan: hsl(178, 100%, 50%);
+  --clr-cyan-20: hsl(178, 100%, 61%, 20%);
   --clr-veryDarkBlueMain: hsl(217, 54%, 11%);
   --clr-veryDarkBlueCard: hsl(216, 50%, 16%);
   --clr-veryDarkBlueLine: hsl(215, 32%, 27%);
@@ -95,18 +96,45 @@ body {
 
 .nft-img {
   border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nft-img::before {
+  content: url("./images/icon-view.svg");
+  background: var(--clr-cyan-20);
+  border-radius: 0.5rem;
+  position: absolute;
+  width: 286px;
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+.nft-img:hover::before {
+  opacity: 1;
 }
 
 .nft-title {
   color: var(--clr-white);
   font-size: 22px;
   font-weight: var(--fw-600);
+  cursor: pointer;
+}
+
+.nft-title:hover {
+  color: var(--clr-cyan);
 }
 
 .nft-description {
   color: var(--clr-softBlue);
   font-size: 16px;
-  font-weight: var(--fw-300)
+  font-weight: var(--fw-300);
 }
 
 .nft-wrapper {
@@ -120,18 +148,18 @@ body {
 }
 
 .nft-value::before {
-  content: url('./images/icon-ethereum.svg');
+  content: url("./images/icon-ethereum.svg");
   padding: 0 5px 0 0;
   vertical-align: -13%;
 }
 
 .nft-countdown {
   color: var(--clr-softBlue);
-  font-weight:  var(--fw-400);
+  font-weight: var(--fw-400);
 }
 
 .nft-countdown::before {
-  content: url('./images/icon-clock.svg');
+  content: url("./images/icon-clock.svg");
   padding: 0 5px 0 0;
   vertical-align: -13%;
 }
@@ -158,4 +186,9 @@ body {
 
 .avatar-creator span {
   color: var(--clr-white);
+  cursor: pointer;
+}
+
+.avatar-creator span:hover {
+  color: var(--clr-cyan);
 }

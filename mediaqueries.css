@@ -3,6 +3,10 @@
     width: 350px;
   }
 
+  .nft-img::before {
+    width: 310px;
+  }
+
   .nft-description {
     font-size: 18px;
   }
