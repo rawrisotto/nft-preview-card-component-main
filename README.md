@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/rawrisotto/nft-preview-card-component-main)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://65ed7cef93097c49f8fe7f5c--keen-tanuki-63a93f.netlify.app/)
 
 ## My process
 
