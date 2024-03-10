@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  .nft-article {
+    width: 350px;
+  }
+
+  .nft-description {
+    font-size: 18px;
+  }
+}
